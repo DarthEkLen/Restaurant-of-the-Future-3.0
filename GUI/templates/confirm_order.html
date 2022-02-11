@@ -33,16 +33,20 @@
 <table border = "3" width="220" height="30" >
     <caption>Order Confirmation Details</caption>
     <tr>
-        <th>Order Id</th>
-        <th>Category</th>
         <th>Name</th>
+        <th>Category</th>
+        <th>Order Time</th>
+	<th>Order No</th>
+	<th>Table</th>
     </tr> 
     {% for mars_iot_not_received in userDetails %}
         <form action="#" method="post">
             <tr>
-                <td><input type="text" name="nm1" value="{{mars_iot_not_received[2]}}"}></td>        
-                <td><input type="text" name="nm2" value="{{mars_iot_not_received[1]}}"}></td>
-                <td><input type="text" name="nm3" value="{{mars_iot_not_received[0]}}"}></td>        
+                <td><input class=text type="text" name="nm1" value="{{mars_iot_not_received[0]}}"}></td>        
+                <td><input class=text type="text" name="nm2" value="{{mars_iot_not_received[1]}}"}></td>
+                <td><input class=text type="text" name="nm3" value="{{mars_iot_not_received[2]}}"}></td>    
+                <td><input class=text type="text" name="nm4" value="{{mars_iot_not_received[3]}}"}></td>        
+                <td><input class=text type="text" name="nm5" value="{{mars_iot_not_received[4]}}"}></td>
                 <td><input type="submit" value="Confirm this order"}></td>
             </tr>
         </form>

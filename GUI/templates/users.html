@@ -29,17 +29,21 @@
 <table border = "3" width="220" height="120" > 
     <caption>Not Received</caption>
     <tr>
-        <th>Order Id</th>
-        <th>Category</th>
         <th>Name</th>
+        <th>Category</th>
+        <th>Order Time</th>
+        <th>Table </th>
+        <th>Order</th>
     </tr>
     {% for mars_iot_not_received in userDetails %}
         <tr>
-            <td> {{mars_iot_not_received[2]}} </td>
+            <td> {{mars_iot_not_received[0]}} </td>
             <td> {{mars_iot_not_received[1]}} </td>
+            <td> {{mars_iot_not_received[2]}} </td>
+            <td> {{mars_iot_not_received[4]}} </td>
             <td>
                 <form action="" method="post">
-                    <input type="text" name="nm" value="{{mars_iot_not_received[0]}}"}>
+                    <input type="text" name="nm" value="{{mars_iot_not_received[3]}}"}>
                     <input type="submit" value="prepared"}>
                 </form>
             </td>
@@ -50,15 +54,21 @@
 <table border = "3" width="220" height="30" > 
     <caption>Not Prepared</caption>
     <tr>
-        <th>Order Id</th>
-        <th>Category</th>
+        <th>Order</th>
         <th>Name</th>
+        <th>Category</th>
+        <th>Order Time</th>
+        <th>Table </th>
+        <th>Prep Time</th>
     </tr>
     {% for mars_iot_not_prepare in userDetails1 %}
         <tr>
-            <td> {{mars_iot_not_prepare[2]}} </td>
-            <td> {{mars_iot_not_prepare[1]}} </td>
+            <td> {{mars_iot_not_prepare[3]}} </td>
             <td> {{mars_iot_not_prepare[0]}} </td>
+            <td> {{mars_iot_not_prepare[1]}} </td>
+            <td> {{mars_iot_not_prepare[2]}} </td>
+            <td> {{mars_iot_not_prepare[4]}} </td>
+            <td> {{mars_iot_not_prepare[5]}} </td>
         </tr>
     
     {% endfor %} 
